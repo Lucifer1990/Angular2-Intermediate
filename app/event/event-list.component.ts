@@ -1,0 +1,21 @@
+import {Component} from '@angular/core';
+@Component({
+    selector:'event-list',
+    templateUrl:'app/event/event-list.component.html'
+})
+export class EventListComponent{
+    event={
+        id:1,
+        name:'Angular Connect',
+        date:'9/26/2036',
+        time:'10:00 AM',
+        price:599.99,
+        imageUrl:'/app/assets/images/angularconnect-shield.png',
+        location:{
+            address:'1057 DT',
+            city:'London',
+            country:'England'
+        }
+
+    }
+}
