@@ -12,7 +12,13 @@ import {Component, Input} from '@angular/core';
     <span>&nbsp;</span>
     <span>{{childEvent.location.city}}, {{childEvent.location.country}}</span>
     </div>
-</div>  `
+</div>  `,
+  styles:[`
+    .thumbnail{
+      min-height:210px;
+    }
+    `
+  ]
 })
 
 export class EventThumbnailComponent{

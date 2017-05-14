@@ -1,14 +1,7 @@
-<h2>Upcoming Angular2 Events</h2> 
+<h2>Upcoming Angular2 Events</h2>
 <hr/>
-<event-thumbnail [childEvent]='event'></event-thumbnail>
-<!--div class="well hoverwell thumbnail">
-    <h2>{{event.name}}</h2>
-    <div>Date:{{event.date}}</div>
-    <div>Time:{{event.time}}</div>
-    <div>Price:${{event.price}}</div>
-    <div>
-    <span>Location:{{event.location.address}}</span>
-    <span>&nbsp;</span>
-    <span>{{event.location.city}}, {{event.location.country}}</span>
+<div class="row">
+    <div class="col-md-5" *ngFor="let event of events">
+        <event-thumbnail [childEvent]='event'></event-thumbnail>
     </div>
-</div-->
+</div>
