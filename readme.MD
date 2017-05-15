@@ -1,4 +1,4 @@
-Angular 2 Fundamentals Course (Progress - video 28)
+Angular 2 Fundamentals Course (Progress - video 31)
 ========================
 This is the getting started package for the Pluralsight course on Angular 2 Fundamentals found here: http://app.pluralsight.com/courses/angular-fundamentals
 
