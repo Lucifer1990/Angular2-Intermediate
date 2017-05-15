@@ -5,7 +5,12 @@ import {Component, Input} from '@angular/core';
     template:`<div class="well hoverwell thumbnail">
     <h2>{{childEvent?.name}}</h2>
     <div>Date:{{childEvent?.date}}</div>
-    <div>Time:{{childEvent?.time}}</div>
+    <div [ngSwitch]="childEvent?.time" [ngClass]="markIt()">
+      Time:{{childEvent?.time}}
+      <span *ngSwitchCase="'8:00 am'"> (Early start)</span>
+      <span *ngSwitchCase="'10:00 am'"> (Late start)</span>
+      <span *ngSwitchDefault> (Normal start)</span>
+    </div>
     <div>Price:\${{childEvent?.price}}</div>
     <div>
     <div *ngIf="childEvent.location">
@@ -19,6 +24,12 @@ import {Component, Input} from '@angular/core';
     .thumbnail{
       min-height:210px;
     }
+    .green{
+      color:chartreuse;
+    }
+    .bold{
+      font-weight:bold;
+    }
     `
   ]
 })
@@ -26,4 +37,12 @@ import {Component, Input} from '@angular/core';
 export class EventThumbnailComponent{
   @Input()
   childEvent:any;
+
+  markIt(){
+    if(this.childEvent && this.childEvent.time=="8:00 am"){
+      return 'green bold';
+    }else{
+      return;
+    }
+  }
 }
