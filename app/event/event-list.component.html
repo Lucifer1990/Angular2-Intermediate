@@ -2,6 +2,6 @@
 <hr/>
 <div class="row">
     <div class="col-md-5" *ngFor="let event of events">
-        <event-thumbnail [childEvent]='event'></event-thumbnail>
+        <event-thumbnail (click)="showToastr(event.name)" [childEvent]='event'></event-thumbnail>
     </div>
 </div>
